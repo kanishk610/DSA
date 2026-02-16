@@ -1,0 +1,20 @@
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        System.out.print("Enter the Number : ");
+        Scanner sc=new Scanner (System.in);
+        int n=sc.nextInt();
+        int reverse=0;
+        int dupli=n;
+        while(n>0){
+            int Lastdigit=n%10;
+            n=n/10;
+             reverse=(reverse*10)+Lastdigit;
+        }
+            if(dupli==reverse){
+               System.out.print(true);
+            }else{
+              System.out.print(false);
+            }
+    }
+}
