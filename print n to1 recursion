@@ -1,0 +1,13 @@
+class Main {
+public static void print5(int i,int n){
+    if(i<n){
+        return ;
+    }
+    System.out.println(i);
+    print5(i-1,n);
+}
+    public static void main(String[] args) {
+     print5(5,1);
+     
+    }
+}
