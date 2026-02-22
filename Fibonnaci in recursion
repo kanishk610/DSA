@@ -1,0 +1,17 @@
+import java.util.*;
+class Main {
+    public static int Fibonnaci(int n){
+        if(n<=1){
+            return n;
+        }
+        int last=Fibonnaci(n-1);
+        int slast=Fibonnaci(n-2);
+        return last + slast;
+    }
+    public static void main(String[] args) {
+        System.out.print("Enter the number : ");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.print(Fibonnaci(n));
+    }
+}
