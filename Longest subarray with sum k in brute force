@@ -1,0 +1,29 @@
+
+import java.util.*;
+class Main {
+    public static void main(String[] args) {
+        System.out.print("Enter the Number : ");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        System.out.print("Enter the k : ");
+        int k=sc.nextInt();
+        int [] arr=new int[n];
+        
+        System.out.print("Enter the Elements : ");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int length=0;
+        for(int i=0;i<n;i++){
+            int sum=0;
+            for(int j=i;j<n;j++){
+                sum+=arr[j];
+                if(sum==k){
+                   length= Math.max(length,j-i+1);
+                }
+            }
+        }
+            System.out.print("longest subarray " +length);
+    
+    }
+}
