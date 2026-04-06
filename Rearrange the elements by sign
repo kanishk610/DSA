@@ -1,0 +1,29 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.print("Enter the Number : ");
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int [] arr=new int[n];
+        System.out.print("Enter the Elements : ");
+        for(int i=0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+        int[] ans=new int[n];
+        int posi=0;
+        int neg=1;
+        for(int i=0;i<n;i++){
+            if(arr[i]>0){
+                ans[posi]=arr[i];
+                posi+=2;
+            }else{
+                ans[neg]=arr[i];
+                neg+=2;
+            }
+            }
+            for(int i=0;i<n;i++){
+                System.out.print(ans[i]+" ");
+        }
+    }
+}
